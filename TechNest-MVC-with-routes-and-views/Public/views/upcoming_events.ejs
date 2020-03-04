@@ -1,0 +1,45 @@
+
+    <%- include('./partials/header'); -%> 
+	<%- include('./partials/navigation'); -%> 
+	
+	<div id="wrapper">
+	<div class="Networking" >
+		<% var topics= ConnectionDB.getTopic();
+			for (let i=0;i<topics.length;i++) {
+			%>
+		
+		
+		<h2> <%= topics[i]  %> </h2>
+		
+		<%  var connections=ConnectionDB.getConnections();
+			for (let j=0;j<connections.length;j++) {
+				if (connections[j].topic==topics[i]){
+		%>
+		<nav>
+			<ul>
+				<li >
+					
+						<h3><% const usp = new URLSearchParams({
+								cid: connections[j].cid
+								})%>
+							<% var url="upcoming_event?" + usp %>
+							<a href="<%= url %>"><%= connections[j].name %></a>
+						
+						</h3>
+					
+				</li>
+				
+			</ul>
+		</nav>
+		
+		<% } } }%>
+	
+	
+	</div>
+	</div>
+	
+	
+	<%- include('./partials/footer'); -%> 
+	
+	
+  

@@ -1,0 +1,41 @@
+
+	<%- include('./partials/header'); -%> 
+	<%- include('./partials/navigation'); -%> 
+	<div class="saved-events-table">
+		<h3>Casper's Events</h3>
+		<table>
+			<tr>
+				<th>Connections</th>
+				<th>Category</th>
+				<th>Going</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>Carcking Technical Interview</td>
+				<td>Networking</td>
+				<td>Yes</td>
+				<td>
+					<button class="btn update" onclick="window.location.href='upcoming_events';">Update</button>
+					<button class="btn delete" onclick="window.location.href='saved-events';">Delete</button>
+				</td>
+			</tr>
+				
+			<tr>
+				<td>Microsoft Meetup</td>
+				<td>Networking</td>
+				<td>Maybe</td>
+				<td><button class="btn update" onclick="window.location.href='upcoming_events';">Update</button>
+					<button class="btn delete" onclick="window.location.href='saved-events';">Delete</button>
+				</td>
+			</tr>
+			
+			
+		
+		
+		</table>
+	</div>
+
+
+	<%- include('./partials/footer'); -%> 
+	
+  

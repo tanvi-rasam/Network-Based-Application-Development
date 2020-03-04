@@ -1,0 +1,45 @@
+
+    <%- include('./partials/header'); -%> 
+	<%- include('./partials/navigation'); -%>
+	
+	
+	<div class="event" >
+		
+		<div class="basic-details">
+		<h2> <%= connection.name %> </h2>
+		
+		<img src="./../assets/images/interview-crack.jpg" alt="cracking-interview-picture">
+		<h3>  
+		Hosted by, David Josh<br>
+		<%= connection.date %><br>
+		<%= connection.time %><br>
+		<%= connection.venue %><br>
+		</h3>
+		
+		</div>
+	
+		<div class="specific-detials">
+		<h2> Details</h2>
+		<h3>
+		<%= connection.details %>
+		
+		</h3>
+		</div>
+	</div>
+	
+	<div class="decision-button">
+		<h2>Would you attend the event?</h2>
+		
+		 <button class="btn yes" onclick="window.location.href='saved-events';">Yes</button>
+		 <button class="btn no"  onclick="window.location.href='saved-events';">No</button>
+		 <button class="btn maybe"  onclick="window.location.href='saved-events';">Maybe</button>
+	
+	</div>
+		
+	
+	
+	
+	
+	<%- include('./partials/footer'); -%> 
+	
+  

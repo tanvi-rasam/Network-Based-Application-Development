@@ -1,0 +1,60 @@
+<!-- nanajjar  -->
+<html>
+
+<head>
+    <title>Course Info Page</title>
+    <link href="./../assets/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<% if (Object.keys(course).length != 4) { %>
+				<div>
+					<table>
+				<tr><td>No course details available!</td></tr>
+					</table>
+				</div>
+			
+	
+	<% } else { %>
+    <div class="main">
+        
+		
+		
+		
+		<table id="course">
+            
+			<tr>
+                <th>CourseID</th>
+                <th>Title</th>
+				<th>Term</th>
+				<th>Instructor</th>
+            </tr>
+            <tr>
+                <td>
+                    <%= course.courseID %>
+                </td>
+                <td>
+                    <%= course.title %>
+                </td>
+				<td>
+                    <%= course.term %>
+                </td>
+				<td>
+                    <%= course.instructor %>
+                </td>
+
+            </tr>
+			<tr>
+				<td class="image" colspan="4"> <%- include('./image'); -%> </td>
+			</tr>
+				
+						
+			
+			
+        </table>
+	
+    </div>
+	<% }%>
+</body>
+
+</html>
